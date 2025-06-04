@@ -76,12 +76,14 @@ while game_start:
             my_snake.extend()
             my_score.clear_score()
             my_score.score_update()
-    if int(my_snake.first_segment.xcor()) > 750 or int(my_snake.first_segment.xcor()) < -750:
-        game_over = Over()
-        game_start = False
-    elif int(my_snake.first_segment.ycor()) > 750 or int(my_snake.first_segment.ycor()) < -750:
-        game_over = Over()
-        game_start = False
+    if int(my_snake.first_segment.xcor()) > 750:
+        my_snake.first_segment.setx(-750)
+    elif int(my_snake.first_segment.xcor()) < -750:
+        my_snake.first_segment.setx(750)
+    elif int(my_snake.first_segment.ycor()) > 750:
+        my_snake.first_segment.sety(-750)
+    elif int(my_snake.first_segment.ycor()) < -750:
+        my_snake.first_segment.sety(750)
 
     for segment in my_snake.segment_list[1:]:
         if my_snake.first_segment.distance(segment) < 10:
