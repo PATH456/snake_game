@@ -56,7 +56,7 @@ while game_start:
             my_timer.time = 5
             my_timer.countdown(screen)
             big_food = True
-        if my_timer.time == -1:
+        if my_timer.time == 0:
             my_food.refresh()
             my_food.shapesize(stretch_len=0.5, stretch_wid=0.5)
             big_food = False

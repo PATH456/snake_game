@@ -21,7 +21,7 @@ class Timer(Turtle):
             screen.ontimer(lambda: self.countdown(screen), 1000)
         else:
             self.clear()
-            self.time -= 1
+
 
 
 
