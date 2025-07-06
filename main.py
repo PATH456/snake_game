@@ -53,10 +53,10 @@ while game_start:
     if my_food.refresh_count % 8 == 0:
         my_food.shapesize(stretch_len=2, stretch_wid=2)
         if not big_food:
-            my_timer.time = 6
+            my_timer.time = 5
             my_timer.countdown(screen)
             big_food = True
-        if my_timer.time == 0:
+        if my_timer.time == -1:
             my_food.refresh()
             my_food.shapesize(stretch_len=0.5, stretch_wid=0.5)
             big_food = False
@@ -87,8 +87,11 @@ while game_start:
 
     for segment in my_snake.segment_list[1:]:
         if my_snake.first_segment.distance(segment) < 10:
-            game_start = False
-            game_over = Over()
+            time.sleep(3)
+            my_snake.reset_snake()
+            my_score.clear_score()
+            my_score.reset_score()
+            my_score.score_update()
 
 
 
