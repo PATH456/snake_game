@@ -1,2 +1,6 @@
 #This file is to keep track on the high scores for player
 0
+
+12
+21
+32
