@@ -1,0 +1,2 @@
+#This file is to keep track on the high scores for player
+0
