@@ -13,7 +13,8 @@ class Snake:
 
     def delete_snake(self):
         for seg in self.segment_list:
-            seg.hideturtle()
+            seg.goto(10000, 10000)
+        self.segment_list.clear()
 
 
     def add_segment(self, pos):
