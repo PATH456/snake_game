@@ -88,7 +88,8 @@ while game_start:
     for segment in my_snake.segment_list[1:]:
         if my_snake.first_segment.distance(segment) < 10:
             time.sleep(3)
-            my_snake.reset_snake()
+            my_snake.delete_snake()
+            my_snake = Snake()
             my_score.clear_score()
             my_score.reset_score()
             my_score.score_update()
